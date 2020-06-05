@@ -39,6 +39,7 @@
 // Happy customers div
 
 .happy-customers {
+  padding-bottom: 108px;
   h5 {
     text-transform: uppercase;
     color: $main-headings-color;
@@ -76,22 +77,22 @@
   }
 }
 
-// Divisory span of text
-span#text-division {
-  display: block;
-  padding-top: 81px;
-  padding-bottom: 81px;
-  text-align: center;
-  font-size: 1.95rem;
-  line-height: 1.5;
-  font-family: $primary-font;
-  color: $main-headings-color;
-  a {
-    display: block;
-    color: $btn-normal-color;
-    text-decoration: none;
-  }
-}
+// Divisory span of text; commented out
+// span#text-division {
+//   display: block;
+//   padding-top: 81px;
+//   padding-bottom: 81px;
+//   text-align: center;
+//   font-size: 1.95rem;
+//   line-height: 1.5;
+//   font-family: $primary-font;
+//   color: $main-headings-color;
+//   a {
+//     display: block;
+//     color: $btn-normal-color;
+//     text-decoration: none;
+//   }
+// }
 
 #how-it-works {
   padding-bottom: 81px;
@@ -118,6 +119,53 @@ span#text-division {
         line-height: 1.5;
         font-weight: lighter;
       }
+    }
+  }
+}
+
+// Client quote reviews
+#client-review-container {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 108px;
+  .client-review {
+    display: flex;
+    flex-direction: column;
+    margin: 0 27px;
+    flex: 0 0 26%;
+
+    transition: all 0.15s ease-out;
+    &:hover {
+      box-shadow: 0px 10px 25px 3px rgba(0, 0, 0, 0.15);
+      transform: translateY(-1px);
+    }
+
+    img {
+      &:first-child {
+        border-radius: 3px;
+        border: none;
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        margin-bottom: 27px;
+      }
+      &:nth-of-type(2) {
+        height: 40px;
+        max-width: 100%;
+        align-self: flex-start;
+        padding: 0 27px;
+        &.smaller {
+          height: 31px;
+        }
+      }
+    }
+
+    p {
+      color: #6e7da2;
+      font-size: 1.05rem;
+      line-height: 1.55;
+      letter-spacing: 0.3px;
+      padding: 7.25px 27px 27px;
     }
   }
 }
