@@ -1,12 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@500;600&display=swap");
+
 $main-text-color: #fff;
 $secondary-text-color: #707070;
 $main-headings-color: #41465a;
 $btn-normal-color: #2f74ff;
 $btn-success-color: #0fc382;
 $primary-font: open-sans, Arial, sans-serif;
-$headings-font: brandon-grotesque, "helvetica neue", helvetica, sans-serif;
+$headings-font: "Mukta", helvetica, sans-serif;
 
 /* Base styles */
 body {
@@ -14,6 +16,9 @@ body {
   max-width: 100vw;
   padding: 0;
   margin: 0;
+
+  display: flex;
+  flex-direction: column;
 }
 
 body > * {
@@ -32,6 +37,7 @@ h3 {
 
 h1 {
   font-size: 2.81rem;
+  line-height: 1.3;
 }
 
 h2 {
@@ -121,4 +127,51 @@ header nav ul li a:hover {
 
 header div .btn.cta {
   margin-left: 27px;
+}
+
+// Footer
+
+#main-footer {
+  justify-self: flex-end;
+  background-color: #323646;
+  padding-top: 108px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  #footer-logo-container {
+    flex: 1 0 30%;
+  }
+  a {
+    text-decoration: none;
+    &.logo {
+      img {
+        height: 41px;
+        width: auto;
+        display: inline-block;
+        margin-right: 27px;
+      }
+    }
+  }
+  div.footer-block {
+    flex: 1 1 20%;
+    margin-bottom: 81px;
+    margin-right: 27px;
+    h6 {
+      font-weight: bold;
+      font-size: 1rem;
+      margin: 0;
+      margin-bottom: 6.75px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-flow: column nowrap;
+      a {
+        line-height: 1.7;
+        color: #7b82a0;
+      }
+    }
+  }
 }

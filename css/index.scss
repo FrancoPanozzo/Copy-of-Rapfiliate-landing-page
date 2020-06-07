@@ -12,7 +12,7 @@
 }
 
 #main-banner h1 {
-  font-weight: lighter;
+  font-weight: 600;
   margin-bottom: 27px;
   max-width: 530px;
 }
@@ -33,7 +33,8 @@
 #main-banner span {
   display: block;
   font-size: 0.8rem;
-  margin-left: 8px;
+  margin-left: 6px;
+  margin-top: -6px;
 }
 
 // Happy customers div
@@ -77,25 +78,23 @@
   }
 }
 
-// Divisory span of text; commented out
-// span#text-division {
-//   display: block;
-//   padding-top: 81px;
-//   padding-bottom: 81px;
-//   text-align: center;
-//   font-size: 1.95rem;
-//   line-height: 1.5;
-//   font-family: $primary-font;
-//   color: $main-headings-color;
-//   a {
-//     display: block;
-//     color: $btn-normal-color;
-//     text-decoration: none;
-//   }
-// }
+span#text-division {
+  display: block;
+  padding-bottom: 81px;
+  text-align: center;
+  font-size: 1.95rem;
+  line-height: 1.5;
+  font-family: $primary-font;
+  color: $main-headings-color;
+  a {
+    display: block;
+    color: $btn-normal-color;
+    text-decoration: none;
+  }
+}
 
 #how-it-works {
-  padding-bottom: 81px;
+  padding-bottom: 108px;
   h2 {
     font-weight: normal;
     margin-bottom: 54px;
@@ -110,7 +109,11 @@
     li {
       margin-right: 54px;
       flex: 1;
-
+      img {
+        width: 65px;
+        background-color: lighten($btn-normal-color, 15%);
+        border-radius: 30%;
+      }
       h3 {
         margin-bottom: 54px;
       }
@@ -118,23 +121,29 @@
         font-size: 1.15rem;
         line-height: 1.5;
         font-weight: lighter;
+        color: lighten(#707070, 10%);
       }
     }
   }
 }
 
 // Client quote reviews
+
+#client-reviews h2 {
+  font-weight: lighter;
+}
+
 #client-review-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding-bottom: 108px;
+
   .client-review {
     display: flex;
     flex-direction: column;
-    margin: 0 27px;
-    flex: 0 0 26%;
+    flex: 0 0 30%;
 
-    transition: all 0.15s ease-out;
+    transition: all 0.1s ease-out;
     &:hover {
       box-shadow: 0px 10px 25px 3px rgba(0, 0, 0, 0.15);
       transform: translateY(-1px);
@@ -166,6 +175,28 @@
       line-height: 1.55;
       letter-spacing: 0.3px;
       padding: 7.25px 27px 27px;
+      margin: 0;
     }
+  }
+}
+
+// Last CTA before footer
+#trial-ad {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 108px;
+  padding-bottom: 216px;
+  img {
+    height: 150px;
+  }
+  span {
+    padding: 54px 0 27px;
+    color: $main-headings-color;
+    font-size: 1.85rem;
+  }
+  a.btn {
+    padding: 16px 22px;
   }
 }
