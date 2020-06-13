@@ -10,6 +10,12 @@ $btn-success-color: #0fc382;
 $primary-font: open-sans, Arial, sans-serif;
 $headings-font: "Mukta", helvetica, sans-serif;
 
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 /* Base styles */
 body {
   min-height: 100vh;
@@ -37,12 +43,13 @@ h3 {
 
 h1 {
   font-size: 2.81rem;
-  line-height: 1.3;
+  line-height: 1.2;
 }
 
 h2 {
   color: $main-headings-color;
-  font-size: 2.25rem;
+  font-size: 2.4rem;
+  font-weight: normal;
 }
 
 h3 {
